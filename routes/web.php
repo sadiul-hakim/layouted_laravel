@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\TeacherController;
 use App\Models\Teacher;
 use Illuminate\Support\Facades\Route;
@@ -19,3 +20,7 @@ Route::get('/contact', function () {
 Route::prefix("/teacher") -> controller(TeacherController::class) -> group(function(){
     Route::get("/all","findAll");
 });
+
+Route::post("/mail/send",[MailController::class,"send"]);
+
+Route::view("/mail_sender","mail_sender");
