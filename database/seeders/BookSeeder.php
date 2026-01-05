@@ -13,28 +13,11 @@ class BookSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table("books")->insert([
-            "title"=>"Java Programming",
-            "category"=>"Programming",
-            "author_id"=>1
-        ]);
-
-        DB::table("books")->insert([
-            "title"=>"Java Thread Programming",
-            "category"=>"Programming",
-            "author_id"=>1
-        ]);
-
-        DB::table("books")->insert([
-            "title"=>"PHP Programming",
-            "category"=>"Programming",
-            "author_id"=>2
-        ]);
-
-        DB::table("books")->insert([
-            "title"=>"PHP OOP Programming",
-            "category"=>"Programming",
-            "author_id"=>2
+        DB::table('books')->insert([
+            ['title' => 'Java Programming', 'category' => 'Programming'],
+            ['title' => 'Java Thread Programming', 'category' => 'Programming'],
+            ['title' => 'PHP Programming', 'category' => 'Programming'],
+            ['title' => 'PHP OOP Programming', 'category' => 'Programming'],
         ]);
     }
 }
