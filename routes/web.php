@@ -3,6 +3,7 @@
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\TeacherController;
 use App\Models\Teacher;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,3 +26,8 @@ Route::prefix("/teacher") -> controller(TeacherController::class) -> group(funct
 Route::post("/mail/send",[MailController::class,"send"]);
 
 Route::view("/mail_sender","mail_sender");
+
+Route::get("/sample_template",function(){
+    $products = 20;
+    return Blade::render('<h1>{{$products}} products are available.</h1>',['products'=>$products]);
+});
