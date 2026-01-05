@@ -19,6 +19,7 @@ Route::get('/contact', function () {
 
 Route::prefix("/teacher") -> controller(TeacherController::class) -> group(function(){
     Route::get("/all","findAll");
+    Route::get("/{teacher:name}","find");
 });
 
 Route::post("/mail/send",[MailController::class,"send"]);

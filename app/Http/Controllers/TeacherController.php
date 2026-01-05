@@ -11,4 +11,8 @@ class TeacherController extends Controller
     public function findAll(){
         return Teacher::all();
     }
+
+    public function find(Teacher $teacher){
+        return $teacher;
+    }
 }
