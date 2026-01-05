@@ -20,7 +20,19 @@ class BookSeeder extends Seeder
         ]);
 
         DB::table("books")->insert([
+            "title"=>"Java Thread Programming",
+            "category"=>"Programming",
+            "author_id"=>1
+        ]);
+
+        DB::table("books")->insert([
             "title"=>"PHP Programming",
+            "category"=>"Programming",
+            "author_id"=>2
+        ]);
+
+        DB::table("books")->insert([
+            "title"=>"PHP OOP Programming",
             "category"=>"Programming",
             "author_id"=>2
         ]);

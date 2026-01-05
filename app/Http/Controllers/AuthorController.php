@@ -16,6 +16,6 @@ class AuthorController extends Controller
     }
 
     public function find(int $id){
-        return Author::with("book") -> find($id);
+        return Author::with("books") -> find($id);
     }
 }
